@@ -7,6 +7,7 @@ Router = Ember.Router.extend(
 Router.map ->
   @resource('widgets',->
     @route('show', {path: ':widget_id'})
+    @route('new')
   )
 
 `export default Router;`

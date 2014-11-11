@@ -1,0 +1,22 @@
+<h5>New Widget</h5>
+<label>
+Title:{{input type="text" value=title required=true}}
+</label>
+<ul id="slides">
+  {{#each slide in configuration.slides}}
+    <li>
+      <div>
+        img:{{slide.img}}
+      </div>
+      <div>
+        text:{{slide.text}}
+      </div>
+    </li>
+  {{/each}}
+</ul>
+<div>
+  <button {{action 'addSlide'}}>Add slide</button>
+</div>
+<div>
+  <button {{action 'save'}}>Save</button>
+</div>
