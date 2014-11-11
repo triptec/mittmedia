@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Widget.create(title: "Allehanda Widget", configuration_data: "{}")
+Widget.create(title: "ST Widget", configuration_data: "{}")
