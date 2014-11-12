@@ -37,5 +37,5 @@ WidgetsFormController = Ember.ObjectController.extend
       data = JSON.stringify({slides: @get('slidesController').toArray()})
       model.set('configurationData', data)
       model.save()
-
+      @transitionToRoute('widgets.show', model)
 `export default WidgetsFormController`
