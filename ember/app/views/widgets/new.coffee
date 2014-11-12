@@ -17,5 +17,5 @@ WidgetsNewView = Ember.View.extend
   actions:
     addSlide: ()->
       @controller.addSlide()
-      #$('#slides').sortable('refresh')
+      #Ember.run.next(@, ->$('#slides').sortable('refresh'))
 `export default WidgetsNewView`

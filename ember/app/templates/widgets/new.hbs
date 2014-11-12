@@ -3,7 +3,7 @@
 Title:{{input type="text" value=title required=true}}
 </label>
 <ul id="slides">
-  {{#each slide in slides}}
+  {{#each slide in slidesController}}
   <li class="item" data-id="{{unbound slide.id}}">
       <div>{{slide.id}}</div>
       <div>
