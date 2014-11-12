@@ -3,19 +3,27 @@
 Title:{{input type="text" value=title required=true}}
 </label>
 <ul id="slides">
-  {{#each slide in configuration.slides}}
-    <li>
+  {{#each slide in slides}}
+  <li class="item" data-id="{{unbound slide.id}}">
+      <div>{{slide.id}}</div>
       <div>
-        img:{{slide.img}}
+        <label>
+        Image:
+        {{input value=slide.img}}
+        </label>
       </div>
       <div>
-        text:{{slide.text}}
+        <label>
+        Text:
+        text:{{input value=slide.text}}
+        </label>
       </div>
+      <div>sort_order: {{slide.sort_order}}</div>
     </li>
   {{/each}}
 </ul>
 <div>
-  <button {{action 'addSlide'}}>Add slide</button>
+  <button {{action 'addSlide' target=view}}>Add slide</button>
 </div>
 <div>
   <button {{action 'save'}}>Save</button>
